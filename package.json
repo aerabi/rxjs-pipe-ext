@@ -1,0 +1,27 @@
+{
+  "name": "rxjs-pipe-ext",
+  "version": "1.0.0",
+  "description": "RxJS pipe extensions",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/aerabi/rxjs-pipe-ext.git"
+  },
+  "author": "aerabi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aerabi/rxjs-pipe-ext/issues"
+  },
+  "homepage": "https://github.com/aerabi/rxjs-pipe-ext#readme",
+  "dependencies": {
+    "rxjs": "^6.5.4"
+  },
+  "devDependencies": {
+    "karma": "^4.4.1",
+    "typescript": "^3.7.5"
+  }
+}
