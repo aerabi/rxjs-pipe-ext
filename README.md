@@ -33,3 +33,16 @@ of(1, 2, 3)
   .pipe(map(x => `${x}`))
   .subscribe(s => console.log(nummericalVal, s));
 ```
+
+###flatZipWith
+
+Similar to `flatMap`, it is used when the transformation returns an observable.
+
+```typescript
+import { of } from 'rxjs';
+import { flatZipWith } from 'rxjs-pipe-ext';
+
+of(1, 2, 3)
+  .pipe(flatZipWith(x => of(`${x}`)))
+  .subscribe(([x, s]) => console.log(x, s));
+```
