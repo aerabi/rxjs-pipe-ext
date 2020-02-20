@@ -1,6 +1,6 @@
 {
   "name": "rxjs-pipe-ext",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "RxJS pipe extensions",
   "main": "lib/index.js",
   "types": "lib/index.t.ts",
@@ -10,23 +10,26 @@
     "format": "prettier --write \"src/**/*.ts\"",
     "prepare": "npm run build",
     "prepublishOnly": "npm test",
-    "version" : "npm run format && git add -A src"
+    "version": "npm run format && git add -A src"
   },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/aerabi/rxjs-pipe-ext.git"
   },
-  "keywords": ["rxjs", "observable"],
+  "keywords": [
+    "rxjs",
+    "observable"
+  ],
   "author": "aerabi",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/aerabi/rxjs-pipe-ext/issues"
   },
-  "files": ["lib/**/*"],
+  "files": [
+    "lib/**/*"
+  ],
   "homepage": "https://github.com/aerabi/rxjs-pipe-ext#readme",
-  "dependencies": {
-    "rxjs": "^6.5.4"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@types/jasmine": "^3.5.5",
     "jasmine": "^3.5.0",
