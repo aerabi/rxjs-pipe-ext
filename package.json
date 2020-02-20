@@ -1,6 +1,6 @@
 {
   "name": "rxjs-pipe-ext",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "RxJS pipe extensions",
   "main": "lib/index.js",
   "types": "lib/index.t.ts",

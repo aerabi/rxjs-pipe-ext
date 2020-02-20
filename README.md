@@ -7,6 +7,14 @@ $ npm install --save rxjs rxjs-pipe-ext
 
 ## Usage
 
+The available operators so far are the following:
+
+-  [zipMap](#zipmap)
+-  [flatZipMap](#flatzipmap)
+-  [projectToFormer](#projecttoformer)
+-  [projectToLatter](#projecttolatter)
+-  [projectTo](#projectto)
+
 ### zipMap
 
 Useful when one wants to transform a value, but also keep the original value to access later:
@@ -45,6 +53,48 @@ import { flatZipMap } from 'rxjs-pipe-ext';
 of(1, 2, 3)
   .pipe(flatZipMap(x => of(`${x}`)))
   .subscribe(([x, s]) => console.log(x, s));
+```
+
+### projectToFormer
+
+Projects an observable of pairs, i.e. `Observable<[T1, T2]>`, to the first coordinate,
+so to get an `Observable<T1>`.
+
+```typescript
+import { of } from 'rxjs';
+import { projectToFormer } from 'rxjs-pipe-ext';
+
+of<[number, string]>([1, '1'], [2, '2'])
+  .pipe(projectToFormer())
+  .subscribe((n: number) => console.log(n));
+```
+
+### projectToLatter
+
+Projects an observable of pairs, i.e. `Observable<[T1, T2]>`, to the second coordinate,
+so to get an `Observable<T2>`.
+
+```typescript
+import { of } from 'rxjs';
+import { projectToLatter } from 'rxjs-pipe-ext';
+
+of<[number, string]>([1, '1'], [2, '2'])
+  .pipe(projectToLatter())
+  .subscribe((s: string) => console.log(s));
+```
+
+### projectTo
+
+Projects an observable of tuples, i.e. `Observable<T[]>`, to the a custom coordinate,
+so to get an `Observable<T>`.
+
+```typescript
+import { of } from 'rxjs';
+import { projectTo } from 'rxjs-pipe-ext';
+
+of([1, 2, 3], [4, 5, 6])
+  .pipe(projectTo(1)) // of(2, 5)
+  .subscribe(console.log);
 ```
 
 ## IDE Type Inference
