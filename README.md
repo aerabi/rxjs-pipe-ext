@@ -2,21 +2,21 @@
 
 ## Install
 ```bash
-$ npm install --save rxjs-pipe-ext
+$ npm install --save rxjs rxjs-pipe-ext
 ```
 
 ## Usage
 
-### zipWith
+### zipMap
 
 Useful when one wants to transform a value, but also keep the original value to access later:
 
 ```typescript
 import { of } from 'rxjs';
-import { zipWith } from 'rxjs-pipe-ext';
+import { zipMap } from 'rxjs-pipe-ext';
 
 of(1, 2, 3)
-  .pipe(zipWith(x => `${x}`))
+  .pipe(zipMap(x => `${x}`))
   .subscribe(([x, s]) => console.log(x, s));
 ```
 
@@ -34,15 +34,24 @@ of(1, 2, 3)
   .subscribe(s => console.log(nummericalVal, s));
 ```
 
-###flatZipWith
+### flatZipMap
 
 Similar to `flatMap`, it is used when the transformation returns an observable.
 
 ```typescript
 import { of } from 'rxjs';
-import { flatZipWith } from 'rxjs-pipe-ext';
+import { flatZipMap } from 'rxjs-pipe-ext';
 
 of(1, 2, 3)
-  .pipe(flatZipWith(x => of(`${x}`)))
+  .pipe(flatZipMap(x => of(`${x}`)))
   .subscribe(([x, s]) => console.log(x, s));
+```
+
+## IDE Type Inference
+
+If the IDE could not infer the type of operators like `zipMap`, import them from
+`rxjs-pipe-ext/lib` instead:
+
+```typescript
+import { zipMap } from 'rxjs-pipe-ext/lib';
 ```
