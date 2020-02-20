@@ -1,5 +1,7 @@
 {
   "compilerOptions": {
+    "declaration": true,
+    "lib": ["es2016"],
     "module": "commonjs",
     "target": "es5",
     "sourceMap": true,
@@ -7,6 +9,8 @@
     "strict": true
   },
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "lib",
+    "**/*spec.ts"
   ]
 }
