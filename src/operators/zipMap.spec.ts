@@ -13,5 +13,5 @@ describe('zipWith', () => {
         }),
       )
       .subscribe(done);
-  })
+  });
 });
