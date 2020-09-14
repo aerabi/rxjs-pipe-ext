@@ -97,6 +97,32 @@ of([1, 2, 3], [4, 5, 6])
   .subscribe(console.log);
 ```
 
+### mapFormer
+
+Transforms the first coordinate of an observable of pairs.
+
+```typescript
+import { of } from 'rxjs';
+import { mapFormer } from 'rxjs-pipe-ext';
+
+of<[number, string]>([1, '1'], [2, '2'])
+  .pipe(mapFormer(x => x * 2)) // [2, '1'], [4, '2']
+  .subscribe(console.log);
+```
+
+### mapLatter
+
+Transforms the second coordinate of an observable of pairs.
+
+```typescript
+import { of } from 'rxjs';
+import { mapLatter } from 'rxjs-pipe-ext';
+
+of<[number, string]>([1, '1'], [2, '2'])
+  .pipe(mapLatter(y => `${y}+${y}`)) // [1, '1+1'], [2, '2+2']
+  .subscribe(console.log);
+```
+
 ## IDE Type Inference
 
 If the IDE could not infer the type of operators like `zipMap`, import them from
