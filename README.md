@@ -14,6 +14,8 @@ The available operators so far are the following:
 -  [projectToFormer](#projecttoformer)
 -  [projectToLatter](#projecttolatter)
 -  [projectTo](#projectto)
+-  [mapFormer](#mapformer)
+-  [mapLatter](#maplatter)
 
 ### zipMap
 
