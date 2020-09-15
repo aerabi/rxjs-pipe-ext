@@ -1,4 +1,6 @@
 # RxJS Pipe Extensions
+[![npm](https://img.shields.io/npm/v/rxjs-pipe-ext)](https://www.npmjs.com/package/rxjs-pipe-ext)
+![Node.js CI](https://github.com/aerabi/rxjs-pipe-ext/workflows/Node.js%20CI/badge.svg)
 
 ## Install
 ```bash
