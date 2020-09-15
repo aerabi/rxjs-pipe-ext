@@ -16,6 +16,8 @@ The available operators so far are the following:
 -  [projectTo](#projectto)
 -  [mapFormer](#mapformer)
 -  [mapLatter](#maplatter)
+-  [flatMapFormer](#flatmapformer)
+-  [flatMapLatter](#flatmaplatter)
 
 ### zipMap
 
@@ -122,6 +124,32 @@ import { mapLatter } from 'rxjs-pipe-ext';
 
 of<[number, string]>([1, '1'], [2, '2'])
   .pipe(mapLatter(y => `${y}+${y}`)) // [1, '1+1'], [2, '2+2']
+  .subscribe(console.log);
+```
+
+### flatMapFormer
+
+Similar to [`mapFormer`](#mapformer), but works on stream-returning transformations:
+
+```typescript
+import { of } from 'rxjs';
+import { flatMapFormer } from 'rxjs-pipe-ext';
+
+of<[number, string]>([1, '1'], [2, '2'])
+  .pipe(flatMapFormer(x => of(x * 2))) // [2, '1'], [4, '2']
+  .subscribe(console.log);
+```
+
+### flatMapLatter
+
+Similar to [`mapLatter`](#maplatter), but works on stream-returning transformations:
+
+```typescript
+import { of } from 'rxjs';
+import { flatMapLatter } from 'rxjs-pipe-ext';
+
+of<[number, string]>([1, '1'], [2, '2'])
+  .pipe(flatMapLatter(y => of(`${y}+${y}`))) // [1, '1+1'], [2, '2+2']
   .subscribe(console.log);
 ```
 
