@@ -11,6 +11,7 @@ $ npm install --save rxjs rxjs-pipe-ext
 
 The available operators so far are the following:
 
+-  [flatMap](#flatmap)
 -  [zipMap](#zipmap)
 -  [flatZipMap](#flatzipmap)
 -  [projectToFormer](#projecttoformer)
@@ -20,6 +21,10 @@ The available operators so far are the following:
 -  [mapLatter](#maplatter)
 -  [flatMapFormer](#flatmapformer)
 -  [flatMapLatter](#flatmaplatter)
+
+### flatMap
+
+An alias of RxJS's `mergeMap`. Just to get rid of the deprecation warning.
 
 ### zipMap
 
@@ -91,7 +96,7 @@ of<[number, string]>([1, '1'], [2, '2'])
 
 ### projectTo
 
-Projects an observable of tuples, i.e. `Observable<T[]>`, to the a custom coordinate,
+Projects an observable of tuples, i.e. `Observable<T[]>`, to a custom coordinate,
 so to get an `Observable<T>`.
 
 ```typescript
