@@ -21,6 +21,10 @@ The available operators so far are the following:
 -  [mapLatter](#maplatter)
 -  [flatMapFormer](#flatmapformer)
 -  [flatMapLatter](#flatmaplatter)
+-  [listMap](#listmap)
+-  [flatListMap](#flatlistmap)
+-  [listFlatMap](#listflatmap)
+-  [flatListFlatMap](#flatlistflatmap)
 
 ### flatMap
 
@@ -158,6 +162,58 @@ import { flatMapLatter } from 'rxjs-pipe-ext';
 of<[number, string]>([1, '1'], [2, '2'])
   .pipe(flatMapLatter(y => of(`${y}+${y}`))) // [1, '1+1'], [2, '2+2']
   .subscribe(console.log);
+```
+
+### listMap
+
+Transforming an observable of list, with a mapping on the list elements:
+
+```typescript
+import { of } from 'rxjs';
+import { listMap } from 'rxjs-pipe-ext';
+
+of([1, 2, 3])
+  .pipe(listMap(x => x * 2))
+  .subscribe(console.log); // [2, 4, 6]
+```
+
+### flatListMap
+
+Transforming an observable of list, with a stream-returning member transformation:
+
+```typescript
+import { of } from 'rxjs';
+import { flatListMap } from 'rxjs-pipe-ext';
+
+of([1, 2, 3])
+  .pipe(flatListMap(x => of(x * 2)))
+  .subscribe(console.log); // [2, 4, 6]
+```
+
+### listFlatMap
+
+Transforming an observable of list, with a list-returning member transformation:
+
+```typescript
+import { of } from 'rxjs';
+import { listFlatMap } from 'rxjs-pipe-ext';
+
+of([1, 2, 3])
+  .pipe(listFlatMap(x => [x, x * 2]))
+  .subscribe(console.log); // [1, 2, 2, 4, 3, 6]
+```
+
+### flatListFlatMap
+
+Transforming an observable of list, with a list-observable-returning transformation:
+
+```typescript
+import { of } from 'rxjs';
+import { flatListFlatMap } from 'rxjs-pipe-ext';
+
+of([1, 2, 3])
+  .pipe(flatListFlatMap(x => of([x, x * 2])))
+  .subscribe(console.log); // [1, 2, 2, 4, 3, 6]
 ```
 
 ## IDE Type Inference
