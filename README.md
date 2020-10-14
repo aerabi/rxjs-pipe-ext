@@ -32,6 +32,8 @@ An alias of RxJS's `mergeMap`. Just to get rid of the deprecation warning.
 
 ### zipMap
 
+![zipMap](marbles/zipMap.svg)
+
 Useful when one wants to transform a value, but also keep the original value to access later:
 
 ```typescript
@@ -59,6 +61,8 @@ of(1, 2, 3)
 
 ### flatZipMap
 
+![flatZipMap](marbles/flatZipMap.svg)
+
 Similar to `flatMap`, it is used when the transformation returns an observable.
 
 ```typescript
@@ -71,6 +75,8 @@ of(1, 2, 3)
 ```
 
 ### projectToFormer
+
+![projectToFormer](marbles/projectToFormer.svg)
 
 Projects an observable of pairs, i.e. `Observable<[T1, T2]>`, to the first coordinate,
 so to get an `Observable<T1>`.
@@ -85,6 +91,8 @@ of<[number, string]>([1, '1'], [2, '2'])
 ```
 
 ### projectToLatter
+
+![projectToLatter](marbles/projectToLatter.svg)
 
 Projects an observable of pairs, i.e. `Observable<[T1, T2]>`, to the second coordinate,
 so to get an `Observable<T2>`.
@@ -114,6 +122,8 @@ of([1, 2, 3], [4, 5, 6])
 
 ### mapFormer
 
+![mapFormer](marbles/mapFormer.svg)
+
 Transforms the first coordinate of an observable of pairs.
 
 ```typescript
@@ -126,6 +136,8 @@ of<[number, string]>([1, '1'], [2, '2'])
 ```
 
 ### mapLatter
+
+![mapLatter](marbles/mapLatter.svg)
 
 Transforms the second coordinate of an observable of pairs.
 
@@ -140,6 +152,8 @@ of<[number, string]>([1, '1'], [2, '2'])
 
 ### flatMapFormer
 
+![flatMapFormer](marbles/flatMapFormer.svg)
+
 Similar to [`mapFormer`](#mapformer), but works on stream-returning transformations:
 
 ```typescript
@@ -152,6 +166,8 @@ of<[number, string]>([1, '1'], [2, '2'])
 ```
 
 ### flatMapLatter
+
+![flatMapLatter](marbles/flatMapLatter.svg)
 
 Similar to [`mapLatter`](#maplatter), but works on stream-returning transformations:
 
@@ -166,6 +182,8 @@ of<[number, string]>([1, '1'], [2, '2'])
 
 ### listMap
 
+![listMap](marbles/listMap.svg)
+
 Transforming an observable of list, with a mapping on the list elements:
 
 ```typescript
@@ -178,6 +196,8 @@ of([1, 2, 3])
 ```
 
 ### flatListMap
+
+![flatListMap](marbles/flatListMap.svg)
 
 Transforming an observable of list, with a stream-returning member transformation:
 
@@ -192,6 +212,8 @@ of([1, 2, 3])
 
 ### listFlatMap
 
+![listFlatMap](marbles/listFlatMap.svg)
+
 Transforming an observable of list, with a list-returning member transformation:
 
 ```typescript
@@ -204,6 +226,8 @@ of([1, 2, 3])
 ```
 
 ### flatListFlatMap
+
+![flatListFlatMap](marbles/flatListFlatMap.svg)
 
 Transforming an observable of list, with a list-observable-returning transformation:
 
