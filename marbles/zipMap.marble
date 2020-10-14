@@ -1,0 +1,5 @@
+marble zipMap
+{
+    source a:             +--1-2-3--4--|
+    operator zipMap:      +--{1,A}-{2,B}-{3,C}--{4,D}--|
+}

@@ -32,6 +32,8 @@ An alias of RxJS's `mergeMap`. Just to get rid of the deprecation warning.
 
 ### zipMap
 
+![zipMap](marbles/zipMap.svg)
+
 Useful when one wants to transform a value, but also keep the original value to access later:
 
 ```typescript
