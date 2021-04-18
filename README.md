@@ -248,3 +248,6 @@ If the IDE could not infer the type of operators like `zipMap`, import them from
 ```typescript
 import { zipMap } from 'rxjs-pipe-ext/lib';
 ```
+
+
+You can read about this further in [this](https://medium.com/@Areg_Sargsyan/rxjs-in-angular-6526bcff0d74) article. 
