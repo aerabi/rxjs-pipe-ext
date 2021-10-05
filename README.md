@@ -32,7 +32,7 @@ An alias of RxJS's `mergeMap`. Just to get rid of the deprecation warning.
 
 ### zipMap
 
-![zipMap](marbles/zipMap.svg)
+![zipMap](marbles/zipMap.png)
 
 Useful when one wants to transform a value, but also keep the original value to access later:
 
@@ -61,7 +61,7 @@ of(1, 2, 3)
 
 ### flatZipMap
 
-![flatZipMap](marbles/flatZipMap.svg)
+![flatZipMap](marbles/flatZipMap.png)
 
 Similar to `flatMap`, it is used when the transformation returns an observable.
 
@@ -76,7 +76,7 @@ of(1, 2, 3)
 
 ### projectToFormer
 
-![projectToFormer](marbles/projectToFormer.svg)
+![projectToFormer](marbles/projectToFormer.png)
 
 Projects an observable of pairs, i.e. `Observable<[T1, T2]>`, to the first coordinate,
 so to get an `Observable<T1>`.
@@ -92,7 +92,7 @@ of<[number, string]>([1, '1'], [2, '2'])
 
 ### projectToLatter
 
-![projectToLatter](marbles/projectToLatter.svg)
+![projectToLatter](marbles/projectToLatter.png)
 
 Projects an observable of pairs, i.e. `Observable<[T1, T2]>`, to the second coordinate,
 so to get an `Observable<T2>`.
@@ -122,7 +122,7 @@ of([1, 2, 3], [4, 5, 6])
 
 ### mapFormer
 
-![mapFormer](marbles/mapFormer.svg)
+![mapFormer](marbles/mapFormer.png)
 
 Transforms the first coordinate of an observable of pairs.
 
@@ -137,7 +137,7 @@ of<[number, string]>([1, '1'], [2, '2'])
 
 ### mapLatter
 
-![mapLatter](marbles/mapLatter.svg)
+![mapLatter](marbles/mapLatter.png)
 
 Transforms the second coordinate of an observable of pairs.
 
@@ -152,7 +152,7 @@ of<[number, string]>([1, '1'], [2, '2'])
 
 ### flatMapFormer
 
-![flatMapFormer](marbles/flatMapFormer.svg)
+![flatMapFormer](marbles/flatMapFormer.png)
 
 Similar to [`mapFormer`](#mapformer), but works on stream-returning transformations:
 
@@ -167,7 +167,7 @@ of<[number, string]>([1, '1'], [2, '2'])
 
 ### flatMapLatter
 
-![flatMapLatter](marbles/flatMapLatter.svg)
+![flatMapLatter](marbles/flatMapLatter.png)
 
 Similar to [`mapLatter`](#maplatter), but works on stream-returning transformations:
 
@@ -182,7 +182,7 @@ of<[number, string]>([1, '1'], [2, '2'])
 
 ### listMap
 
-![listMap](marbles/listMap.svg)
+![listMap](marbles/listMap.png)
 
 Transforming an observable of list, with a mapping on the list elements:
 
@@ -197,7 +197,7 @@ of([1, 2, 3])
 
 ### flatListMap
 
-![flatListMap](marbles/flatListMap.svg)
+![flatListMap](marbles/flatListMap.png)
 
 Transforming an observable of list, with a stream-returning member transformation:
 
@@ -212,7 +212,7 @@ of([1, 2, 3])
 
 ### listFlatMap
 
-![listFlatMap](marbles/listFlatMap.svg)
+![listFlatMap](marbles/listFlatMap.png)
 
 Transforming an observable of list, with a list-returning member transformation:
 
@@ -227,7 +227,7 @@ of([1, 2, 3])
 
 ### flatListFlatMap
 
-![flatListFlatMap](marbles/flatListFlatMap.svg)
+![flatListFlatMap](marbles/flatListFlatMap.png)
 
 Transforming an observable of list, with a list-observable-returning transformation:
 
@@ -250,4 +250,4 @@ import { zipMap } from 'rxjs-pipe-ext/lib';
 ```
 
 
-You can read about this further in [this](https://medium.com/@Areg_Sargsyan/rxjs-in-angular-6526bcff0d74) article. 
+You can read about this further in [this](https://medium.com/@Areg_Sargsyan/rxjs-in-angular-6526bcff0d74) article.
